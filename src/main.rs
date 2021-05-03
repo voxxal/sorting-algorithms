@@ -18,7 +18,6 @@ fn main() {
         bubble::sort,
         quantum_bogo::sort,
     ];
-    // print!("\x1B[2J\x1B[1;1H");
     let mut a = Vec::new();
     for i in 1..150 {
         if i % 2 == 0 {

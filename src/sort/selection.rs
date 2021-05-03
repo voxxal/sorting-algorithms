@@ -1,6 +1,4 @@
 use std::time::Instant;
-use std::thread::sleep_ms;
-use crate::create_bars;
 pub fn sort(input: Vec<u16>) -> String {
     let mut comparisons = 0;
     let elap = Instant::now();
