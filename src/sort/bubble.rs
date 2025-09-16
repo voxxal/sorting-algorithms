@@ -19,7 +19,7 @@ pub fn sort(input: Vec<u16>) -> String {
             comparisons += 1;
         }
         // Nothing was swapped so therefore the array is sorted
-        if swapped == false {
+        if !swapped {
             break;
         }
     }

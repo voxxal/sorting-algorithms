@@ -13,15 +13,12 @@ pub fn sort(input: Vec<u16>) -> String {
     let elap = Instant::now();
     let mut output = vec![];
     for entry in input.to_vec() {
-        if output.len() == 0 || &entry >= output.last().unwrap() {
+        if output.is_empty() || &entry >= output.last().unwrap() {
             output.push(entry);
         }
         comparisons += 1;
     }
-    let removed = match u32::try_from(input.len() - output.len()) {
-        Ok(num) => num,
-        Err(_) => 0,
-    };
+    let removed = u32::try_from(input.len() - output.len()).unwrap_or(0);
     format!(
         "Input: {:?}\nOutput: {:?}\nElapsed: {}\nComparisons: {}\nRemoved: {}\n",
         input,

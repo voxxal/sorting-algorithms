@@ -40,7 +40,7 @@ pub fn create_bar(height: u16, position: u16, color: style::Color) -> Result<(),
     Ok(())
 }
 //TODO Accept vec instead
-pub fn create_bars(nums: &Vec<u16>, highlights: Vec<u16>) {
+pub fn create_bars(nums: &[u16], highlights: Vec<u16>) {
     execute!(
         stdout(),
         terminal::Clear(terminal::ClearType::All),

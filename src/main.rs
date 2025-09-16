@@ -26,5 +26,5 @@ fn main() {
     }
     // let mut a = (1..50).collect::<Vec<u16>>();
     a.shuffle(&mut thread_rng());
-    println!("{}", bubble::sort(a))
+    println!("{}", insertion::sort(a))
 }

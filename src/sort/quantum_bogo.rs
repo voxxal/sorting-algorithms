@@ -14,19 +14,17 @@ pub fn sort(input: Vec<u16>) -> String {
         if len == 1 || len == 0 {
             break;
         }
-        let mut cont : bool = false;
+        let mut cont: bool = false;
         // Check if one element is greater than the other
         for i in 1..len {
             if output[i - 1] > output[i] {
                 cont = true;
             }
-        };
+        }
         // Destroy the universe
         if cont {
             panic!("Failed to destroy universe.");
         }
-        // The array is sorted!
-        break;
     }
     format!(
         "Input: {:?}\nOutput: {:?}\nElapsed: {}\nComparisons: {}\n",
